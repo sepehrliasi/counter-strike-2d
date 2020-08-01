@@ -171,6 +171,19 @@ public class Main extends Application {
                 scene.setFill(Color.rgb(57,125,10));
             }
         }.start();
+
+        root.getChildren().add(text1);
+        root.getChildren().add(text2);
+        root.getChildren().add(textA);
+        root.getChildren().add(textB);
+        root.getChildren().add(rectangleA);
+        root.getChildren().add(rectangleB);
+        root.getChildren().add(line1);
+        root.getChildren().add(line2);
+        root.getChildren().add(line3);
+        root.getChildren().add(circle1);
+        root.getChildren().add(ball);
+
     }
 
     @Override

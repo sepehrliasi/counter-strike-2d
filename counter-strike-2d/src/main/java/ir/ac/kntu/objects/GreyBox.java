@@ -1,9 +1,9 @@
 package ir.ac.kntu.objects;
 
-import javafx.scene.paint.Color;
+import java.io.Serializable;
 
-public class GreyBox extends MyObjects {
+public class GreyBox extends MyObjects implements Serializable {
     public GreyBox(double x, double y, double width, double length){
-        super(x, y, width, length, Color.GREY, true, "./src/main/java/resources/map/greybox.png");
+        super(x, y, width, length, true, "./src/main/java/resources/map/greybox.png");
     }
 }

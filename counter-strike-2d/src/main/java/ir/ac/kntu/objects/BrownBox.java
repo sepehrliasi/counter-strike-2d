@@ -1,9 +1,9 @@
 package ir.ac.kntu.objects;
 
-import javafx.scene.paint.Color;
+import java.io.Serializable;
 
-public class BrownBox extends MyObjects {
+public class BrownBox extends MyObjects implements Serializable {
     public BrownBox(double x, double y, double width, double length){
-        super(x, y, width, length, Color.BROWN, false, "./src/main/java/resources/map/brownbox.png");
+        super(x, y, width, length, false, "./src/main/java/resources/map/brownbox.png");
     }
 }

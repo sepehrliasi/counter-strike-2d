@@ -1,10 +1,10 @@
 package ir.ac.kntu.objects;
 
-import javafx.scene.paint.Color;
+import java.io.Serializable;
 
-public class CreamWall extends MyObjects{
+public class CreamWall extends MyObjects implements Serializable {
 
     public CreamWall(double x, double y, double width, double length){
-        super(x, y, width, length, Color.rgb(255,253,120), false, "./src/main/java/resources/map/wall2.JPG");
+        super(x, y, width, length, false, "./src/main/java/resources/map/wall2.JPG");
     }
 }

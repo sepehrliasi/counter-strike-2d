@@ -4,6 +4,7 @@ import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
+import javafx.scene.ParallelCamera;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
@@ -29,6 +30,11 @@ public class Main extends Application {
         primaryStage.setTitle("Pong");
         primaryStage.setResizable(false);
         primaryStage.show();
+
+        ParallelCamera camera = new ParallelCamera();
+//        camera.setScaleX(1);
+//        camera.setScaleY(1);
+        scene.setCamera(camera);
 
         int scoreA = 0;
         Text text1 = new Text("Player A: " + scoreA);
@@ -169,6 +175,9 @@ public class Main extends Application {
                 }
                 goal = false;
                 scene.setFill(Color.rgb(57,125,10));
+
+                camera.setLayoutX(ball.getCenterX() - 800 / 2);
+                camera.setLayoutY(ball.getCenterY() - 500 / 2);
             }
         }.start();
 

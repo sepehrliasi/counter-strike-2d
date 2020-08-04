@@ -1,6 +1,8 @@
 package ir.ac.kntu.map;
 
 import ir.ac.kntu.objects.*;
+import ir.ac.kntu.objects.area.CTSpawn;
+import ir.ac.kntu.objects.area.TSpawn;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
@@ -145,6 +147,14 @@ public class ReadMap extends Application {
             poolCir[i] = pools.get(i).getPool();
             pane.getChildren().add(poolCir[i]);
         }
+
+        CTSpawn ctSpawn = new CTSpawn();
+        Rectangle ct = ctSpawn.getArea();
+        pane.getChildren().add(ct);
+
+        TSpawn tSpawn = new TSpawn();
+        Rectangle t = tSpawn.getArea();
+        pane.getChildren().add(t);
     }
 
     public Scene getMapScene(){
